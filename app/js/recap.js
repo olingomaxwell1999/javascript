@@ -80,7 +80,50 @@ let trimmed = trial.trim()
 console.log(trial);
 console.log(trimmed);
 
-//Numbers
+//.slice() - extracts a part of a string and returns the extracted part in a new string. Has a starting point and an ending point. If a parameter is negative, the position is counted from the end of the string.
+
+let sliceOne = 'Learning more about Strings'
+
+let slicedOne = sliceOne.slice(2, 13)
+
+console.log(slicedOne);
+
+//.substring() - similar to slice but The difference is that start and end values less than 0 are treated as 0
+
+let part = sliceOne.substring(2, 13)
+
+console.log(part);
+
+//.substr() - similar to the slice method but the second parameter specifies the length of the extracted part If the first parameter is negative, the position counts from the end of the string
+
+let partB = sliceOne.substr(7, 6);
+
+console.log(partB);
+
+//.replace() - replaces the string with a new string. This method is case sensitive
+
+let newString = sliceOne.replace('I wanna work at Tesla')
+
+console.log(newString);
+
+//For more on string methods please visit https://www.w3schools.com/js/js_string_methods.asp or https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+
+//Numbers when working with numbers, undefined turns to NAN(Not a Number), null Turns to a 0, true turns to a 1 and false turns to a 0
+
+//initializing variables with numbers
+
+//Integer
+let nums = 200
+
+//Floats
+let decimal = 200.45
+
+//Performing mathematical operations with numbers
+
+//Addition
+let addition = 3 + 4
+
+console.log(addition);
 
 //Arrays
 
