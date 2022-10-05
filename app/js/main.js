@@ -182,11 +182,234 @@ console.log(Yasir);
 // import { } from ''
 // import Button from 'bootstrap'
 
-let x = 1
+// let x = 1
 
-const show = () => {
-  return x
-}
+// const show = () => {
+//   return x
+// }
 
-show()
+// show()
 
+
+// {
+//   var a = 'block scope'
+//   let b = 'block scope'
+//   const c = 'block scope'
+// }
+
+// function scope() {
+//   var a = 'functional scope'
+//   var b = 'functional scope'
+//   var c = 'functional scope'
+// }
+
+// const a = 10
+
+// const trial = function () {
+//   const a = 10
+//   console.log(a);
+// }
+
+// console.log(a);
+
+// {
+//   const a = 10
+//   console.log(a);
+// }
+
+//Interview Questions
+
+// let students = [
+//   {
+//     name: 'Fauzia Omala',
+//     admission: 1,
+//     marks:70
+//   },
+//   {
+//     name: 'Allen Shamrock',
+//     admission: 2,
+//     marks:65
+//   },
+//   {
+//     name: 'Bill Odongo',
+//     admission: 3,
+//     marks:62
+//   },
+//   {
+//     name: 'Jahfar ',
+//     admission: 4,
+//     marks:59
+//   },
+//   {
+//     name: 'Ismael ',
+//     admission: 5,
+//     marks:75
+//   },
+//   {
+//     name: 'Brian Okoth',
+//     admission: 6,
+//     marks:50
+//   },
+//   {
+//     name: 'Yasir Ahmed',
+//     admission: 7,
+//     marks:77
+//   },
+//   {
+//     name: 'Lenox Okoth',
+//     admission: 8,
+//     marks:55
+//   },
+//   {
+//     name: 'Johner ',
+//     admission: 9,
+//     marks:72
+//   },
+//   {
+//     name: 'Robert Okello',
+//     admission: 10,
+//     marks:79
+//   },
+//   {
+//     name: 'Doreen Nafula ',
+//     admission: 11,
+//     marks:80
+//   },
+// ]
+
+// //Return the name of the students in capital letters
+
+// // let names = []
+
+// // for (i = 0; i < students.length; i++) {
+// //   names.push(students[i].name.toUpperCase())
+// // }
+
+// let names = students.map((stu) => {
+//   return stu.name.toUpperCase()
+// })
+
+// console.log(names);
+
+// //return students who scored more than 60 marks
+
+// const details = students.filter((student) => {
+//   return student.marks < 60
+// })
+
+// console.log(details);
+
+// //Return the name of the students who scored more than 60 marks and their admission number is more than 5
+
+// const detail = students.filter((student) => {
+//   return student.marks < 60 && student.admission > 5
+// })
+
+// console.log(detail);
+
+// //Return the sum of the marks of the students
+
+// const sum = students.reduce((acc, curr) => {
+//   return acc + curr.marks
+// }, 0)
+
+// console.log(sum)
+
+// //Return names of students who scored marks more than 60
+
+// const twomethods = students.filter((stu) => {
+//   return stu.marks > 60
+// }).map((stu) => {
+//   return stu.name
+// })
+
+// console.log(twomethods);
+
+let students = [
+  {
+    name: 'Jahfar Ahmed',
+    admission: 1,
+    marks: 50
+  },
+  {
+    name: 'Bill Odongo',
+    admission: 2,
+    marks: 55
+  },
+  {
+    name: 'Fauzia Omala',
+    admission: 3,
+    marks: 59
+  },
+  {
+    name: 'Allen Shamrock',
+    admission: 4,
+    marks: 65
+  },
+  {
+    name: 'Brian Okoth',
+    admission: 5,
+    marks: 70
+  },
+  {
+    name: 'Ismael Hussein',
+    admission: 6,
+    marks: 75
+  },
+  {
+    name: 'Lenox Okoth',
+    admission: 7,
+    marks: 60
+  },
+  {
+    name: 'Robert Okello',
+    admission: 8,
+    marks: 76
+  },
+  {
+    name: 'Doreen Nafula',
+    admission: 9,
+    marks: 77
+  },
+  {
+    name: 'Johner Maina',
+    admission: 10,
+    marks: 74
+  },
+  {
+    name: 'Yasir Ahmed',
+    admission: 11,
+    marks: 78
+  }
+]
+
+let names = students.map((student) => {
+  return student.name.toLocaleUpperCase()
+})
+
+console.log(names);
+
+let aboveSixty = students.filter((student) => {
+  return student.marks > 60
+}).map((student) => {
+  return student.name
+})
+
+console.log(aboveSixty);
+
+let sum = students.reduce((acc, curr) => {
+  return acc + curr.marks
+}, 0)
+
+console.log(sum);
+
+
+//students above 60% and admission numbers
+
+let studetsAvoveSixty = students.filter((student) => {
+  return student.marks > 60
+}).map((student) => {
+  return student.name + " " + student.admission
+})
+
+console.log(studetsAvoveSixty);
