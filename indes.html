@@ -9,17 +9,29 @@
     <link rel="stylesheet" href="./app/css/style.css">
     <!-- linking of javascript -->
     <!-- <script defer src="./app/js/main.js"></script> -->
-    <script defer src="./app/js/recap.js"></script>
+    <!-- <script defer src="./app/js/recap.js"></script>
+    <script defer src="./app/js/questions.js"></script> -->
+    <script src="./app/js/fetchdata.js"></script>
 </head>
 <body>
     <div class="root">
         <h1></h1>
         <ul>
             <li></li>
-            <button class="btn">
-                <a href="./dommanipulation.html">Dom Manipulation</a>
+            <button class="btns">
+                <!-- <a href="./dommanipulation.html">Dom Manipulation</a> -->click
             </button>
+            <button id="myBtn">Hit Me</button>
         </ul>
     </div>
+
+    <script>
+        const button = document.querySelector('.btns')
+        console.log(button)
+
+        button.addEventListener('click', () => {
+            alert('I have been clicked!!!')
+        })
+    </script>
 </body>
 </html>

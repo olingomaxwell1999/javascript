@@ -125,6 +125,160 @@ let addition = 3 + 4
 
 console.log(addition);
 
+//Subtraction
+let subtraction = 3 - 4
+
+console.log(subtraction);
+
+//Division
+let division = 3 / 4
+
+console.log(division);
+
+//Multiplication
+let multiply = 3 * 4
+
+console.log(multiply);
+
+//Modulus
+let Modulus = 9 % 4
+
+console.log(Modulus);
+
+//Look at more on Numbers from the following links https://www.w3schools.com/js/js_numbers.asp and https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
+
 //Arrays
+//An array is a special variable, which can hold more than one value
+//JavaScript arrays are resizable and can contain a mix of different data types. (When those characteristics are undesirable, use typed arrays instead.)
+
+//How to create an array
+let newArr = ['maxwell']
+
+console.log(newArr);
+
+//ARRAY METHODS
+//.push() -Adding elements to the array at the end
+
+newArr.push('olingo')
+
+console.log(newArr);
+
+//.pop() -Removing elements at the end of an array
+
+newArr.pop('olingo')
+
+console.log(newArr);
+
+//.toString() - Converts an array to a string
+
+let stringi = newArr.toString()
+
+console.log(stringi);
+
+//.unshift() -Adding elements to the array at the start
+
+newArr.unshift('olingo')
+
+console.log(newArr);
+
+//.shift() -remove elements to the array at the start
+
+newArr.shift('olingo')
+
+console.log(newArr);
+
+//.concat() - used to join two or more arrays
+let arr1 = ['maxwell', 'sailas', 'gathu', 'john']
+
+let arr2 = ['alex', 'natasha', 'nyamwange']
+
+let arr3 = ['hope', 'magdalene', 'isika']
+
+let combined = newArr.concat(arr1,arr2,arr3)
+
+console.log(combined);
+
+//.sort() - Arrange an array in an ascending order
+
+let sorted = combined.sort()
+
+console.log(sorted);
+
+//.reverse() - Arrange an array in an opposite order
+
+let reversed = combined.reverse()
+
+console.log(reversed);
+
+//.copyWithin() - Copies array elements within the array, to and from specified positions. This method overwrites the existing values.
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.copyWithin(2, 0); //Copy the first two array elements to the last two array elements
+
+console.log(fruits);
+
+//.every() - Checks if every element in an array pass a test
+
+const ages = [32, 33, 16, 40];
+
+ages.every((age) => {
+    return age > 18;
+})
+
+console.log(ages);
+
+//.map() - Creates a new array with the result of calling a function for each array element
+
+//get the squareroot of the values in the array before
+
+const numbers = [4, 9, 16, 25]
+
+const neArr = numbers.map(Math.sqrt)
+
+console.log(neArr);
+
+//or multiply the above array with two
+const product = numbers.map((num) => {
+    return num * 2
+})
+
+console.log(product);
+
+//.filter() - Creates a new array with every element in an array that pass a test
+
+//Return an array of all values in ages[] that are 18 or over
+const result = ages.filter((age) => {
+    return age >= 18
+});
+
+console.log(result);
+
+//.reduce() - Reduce the values of an array to a single value (going left-to-right)
+const reduced = ages.reduce((acc, curr) => {
+    return acc + curr
+}, 0)
+
+console.log(reduced);
+
+//LOOPS
+//For loop
+//do while loop
+//while loop
+//for of loop
 
 //Objects
+
+let devClass1 = {
+    name: 'dev class',
+    total: 11,
+    present: true
+}
+
+for (stupid in devClass1) {
+    // console.log(key);
+    console.log(devClass1[stupid]);
+    // console.log(Object.values(devClass1));
+}
+
+console.log(devClass1);
+console.log(Object.values(devClass1))

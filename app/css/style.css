@@ -46,14 +46,14 @@ a {
 .container .card:hover {
   transform: translateY(20px);
 }
-.container .card .image {
+.container .card #image {
   height: 50%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.container .card .image img {
+.container .card #image img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
